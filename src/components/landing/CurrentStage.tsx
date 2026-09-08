@@ -29,6 +29,12 @@ export default function CurrentStage() {
               into the waitlist above. We will reach out when early test builds
               are ready for feedback.
             </p>
+            <p>
+              Businesses and organizations: we are glad to talk. Whether you
+              are exploring a partnership, evaluating our work, or looking for
+              a collaborator on an open-source problem, write to us directly at
+              shannon@omniveo.info and a founder will reply.
+            </p>
           </div>
           <a
             href="#waitlist"
