@@ -34,6 +34,12 @@ const schema = defineSchema(
 
     // add other tables here
 
+    waitlist: defineTable({
+      email: v.string(),
+      source: v.optional(v.string()),
+      createdAt: v.number(),
+    }).index("by_email", ["email"]),
+
     // tableName: defineTable({
     //   ...
     //   // table fields
