@@ -22,13 +22,6 @@ const PILLARS = [
   },
 ];
 
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.6, ease: "easeOut" as const },
-};
-
 export default function Hero() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -56,27 +49,27 @@ export default function Hero() {
   };
 
   return (
-    <section id="top" className="relative overflow-hidden pt-20 sm:pt-28">
+    <section id="top" className="relative overflow-hidden pt-24 sm:pt-36">
       {/* Ambient top spotlight */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[520px]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[600px]"
       >
         <svg
-          className="absolute left-1/2 top-0 h-[520px] w-[900px] -translate-x-1/2"
-          viewBox="0 0 900 520"
+          className="absolute left-1/2 top-0 h-[600px] w-[1000px] -translate-x-1/2"
+          viewBox="0 0 1000 600"
           fill="none"
         >
           <defs>
             <radialGradient id="heroSpot" cx="50%" cy="0%" r="80%">
-              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.14" />
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.15" />
               <stop offset="45%" stopColor="#a3a3a3" stopOpacity="0.05" />
               <stop offset="100%" stopColor="#000000" stopOpacity="0" />
             </radialGradient>
           </defs>
-          <rect width="900" height="520" fill="url(#heroSpot)" />
+          <rect width="1000" height="600" fill="url(#heroSpot)" />
         </svg>
-        <div className="absolute left-1/2 top-[-120px] h-64 w-[560px] -translate-x-1/2 rounded-full bg-white/[0.07] blur-3xl" />
+        <div className="absolute left-1/2 top-[-140px] h-72 w-[640px] -translate-x-1/2 rounded-full bg-white/[0.08] blur-3xl" />
       </div>
 
       {/* Fine grid texture */}
@@ -87,7 +80,12 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Eyebrow badge */}
-        <motion.div {...fadeUp} className="flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex justify-center"
+        >
           <span className="rounded-full border border-white/10 bg-neutral-900/80 px-3.5 py-1 font-mono text-xs text-neutral-400">
             Early-Stage • Open Source Lab
           </span>
@@ -95,8 +93,10 @@ export default function Hero() {
 
         {/* Headline */}
         <motion.h1
-          {...fadeUp}
-          className="mx-auto mt-6 max-w-4xl text-center font-display text-4xl font-bold leading-[1.08] tracking-[-0.035em] sm:text-6xl md:text-7xl"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
+          className="mx-auto mt-8 max-w-5xl text-center font-display text-5xl font-bold leading-[1.04] tracking-[-0.035em] sm:text-7xl md:text-8xl"
         >
           <span className="bg-gradient-to-b from-white via-white to-neutral-400 bg-clip-text text-transparent">
             AI tools for creators, founders, and builders.
@@ -105,15 +105,44 @@ export default function Hero() {
 
         {/* Subheadline */}
         <motion.p
-          {...fadeUp}
-          className="mx-auto mt-6 max-w-xl text-center text-base text-neutral-400 sm:text-lg"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.16 }}
+          className="mx-auto mt-7 max-w-2xl text-center text-base text-neutral-400 sm:text-lg"
         >
           We're a global team of founders dedicated to building tools around the
           open source community.
         </motion.p>
 
+        {/* Dual CTA row */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.24 }}
+          className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3"
+        >
+          <a
+            href="#waitlist"
+            className="w-full sm:w-auto rounded-lg bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-neutral-200 transition-colors"
+          >
+            Join the Waitlist
+          </a>
+          <a
+            href="#origin"
+            className="w-full sm:w-auto rounded-lg border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white hover:bg-white/[0.07] transition-colors"
+          >
+            Our Story
+          </a>
+        </motion.div>
+
         {/* Waitlist input bar */}
-        <motion.div {...fadeUp} id="waitlist" className="mt-8 sm:mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.32 }}
+          id="waitlist"
+          className="mt-12"
+        >
           <form
             onSubmit={handleSubmit}
             className="mx-auto flex max-w-md items-center gap-2 rounded-xl border border-white/15 bg-neutral-900/90 p-1.5 shadow-2xl backdrop-blur-md"
@@ -160,7 +189,12 @@ export default function Hero() {
         </motion.div>
 
         {/* Studio Interface Canvas */}
-        <motion.div {...fadeUp} className="mt-16 sm:mt-24">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+          className="mt-20 sm:mt-28"
+        >
           <div className="relative mx-auto max-w-4xl">
             {/* Ambient glow behind canvas */}
             <div
@@ -180,7 +214,7 @@ export default function Hero() {
 
               {/* Pillars */}
               <div className="grid gap-px bg-white/10 sm:grid-cols-3">
-                {PILLARS.map((pillar, i) => (
+                {PILLARS.map((pillar) => (
                   <div
                     key={pillar.title}
                     className="bg-neutral-950/90 p-6 sm:p-8"
@@ -192,16 +226,6 @@ export default function Hero() {
                     <p className="mt-2 text-xs leading-relaxed text-neutral-500">
                       {pillar.body}
                     </p>
-                    <div className="mt-6 flex items-center gap-1.5">
-                      {Array.from({ length: 3 }).map((_, dotIdx) => (
-                        <span
-                          key={dotIdx}
-                          className={`h-1 w-1 rounded-full ${
-                            dotIdx <= i ? "bg-neutral-400" : "bg-neutral-800"
-                          }`}
-                        />
-                      ))}
-                    </div>
                   </div>
                 ))}
               </div>

@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
+import Highlights from "@/components/landing/Highlights";
 import Priorities from "@/components/landing/Priorities";
 import CurrentStage from "@/components/landing/CurrentStage";
 import Origin from "@/components/landing/Origin";
 import Team from "@/components/landing/Team";
+import Faq from "@/components/landing/Faq";
 import Footer from "@/components/landing/Footer";
 
 export default function Landing() {
@@ -18,13 +20,14 @@ export default function Landing() {
       <Navbar />
       <main>
         <Hero />
-        <div className="ov-hairline mx-auto max-w-6xl" aria-hidden="true" />
+        <Highlights />
         <Priorities />
         <CurrentStage />
         <div className="ov-hairline mx-auto max-w-6xl" aria-hidden="true" />
         <Origin />
         <div className="ov-hairline mx-auto max-w-6xl" aria-hidden="true" />
         <Team />
+        <Faq />
       </main>
       <Footer />
     </motion.div>

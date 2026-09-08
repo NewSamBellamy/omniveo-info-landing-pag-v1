@@ -27,13 +27,8 @@ export default function CurrentStage() {
               If you are a founder trying to launch, a builder hacking on an
               idea, or a creator looking for better tooling, drop your email
               into the waitlist above. We will reach out when early test builds
-              are ready for feedback.
-            </p>
-            <p>
-              Businesses and organizations: we are glad to talk. Whether you
-              are exploring a partnership, evaluating our work, or looking for
-              a collaborator on an open-source problem, write to us directly at
-              shannon@omniveo.info and a founder will reply.
+              are ready for feedback. Businesses and organizations: write to us
+              directly — we make time for serious conversations.
             </p>
           </div>
           <a

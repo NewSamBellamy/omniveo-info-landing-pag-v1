@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { label: "Current Stage", href: "#stage" },
   { label: "Origin", href: "#origin" },
   { label: "Team", href: "#team" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
