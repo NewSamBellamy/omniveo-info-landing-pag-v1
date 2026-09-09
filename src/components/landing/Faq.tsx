@@ -8,28 +8,28 @@ import {
 
 const FAQS = [
   {
-    q: "What exactly is OmniVeo?",
-    a: "OmniVeo is an early-stage, open-source AI lab. We are a small team of founders building practical tools for creators, founders, and builders — out in the open, from day one.",
+    q: "What is OmniVeo?",
+    a: "An AI studio — a small team of designers and engineers building practical AI software for creators, founders, and builders.",
   },
   {
-    q: "What are you building right now?",
-    a: "Nothing is on the shelf yet. We are running research, testing prototypes, and laying foundations across three time zones. When early test builds are ready, waitlist members hear about them first.",
+    q: "What are you working on right now?",
+    a: "Our first products are in development now. The past year and a half went into research and prototypes; that work is becoming real tools, and waitlist members will try them first.",
   },
   {
-    q: "Is it really free?",
-    a: "Our foundations are open source. Providing real value to the community for free is one of the four principles everything we ship is anchored to.",
+    q: "Will it be free?",
+    a: "The foundations of what we build stay free and open source. That's one of our core principles, not a marketing line.",
   },
   {
     q: "When will I hear back after joining the waitlist?",
-    a: "When an early build is ready for feedback. We are pre-release, so there is nothing to onboard you into today — joining the list is how you get early access.",
+    a: "When the first build is ready for feedback. There's nothing to onboard you into today — the waitlist is how you get early access.",
   },
   {
     q: "I run a business. Can we work together?",
-    a: "For businesses and organizations: partnerships, evaluations, and collaboration on open-source problems all start with a conversation. Email shannon@omniveo.info and a founder will reply personally.",
+    a: "Yes. Partnerships, collaborations, or a problem you think we should tackle — email shannon@omniveo.info and a founder will reply.",
   },
   {
-    q: "Where is the team located?",
-    a: "California, Lagos, and Dhaka — three continents, a 14-hour time zone gap, and one Discord channel that has stayed open for over a year and a half.",
+    q: "Who's behind OmniVeo?",
+    a: "Shannon, Tobi, and Maruf — three founders who met in a hackathon Discord in 2025 and never stopped building together.",
   },
 ];
 

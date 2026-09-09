@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 const MILESTONES = [
   {
     date: "Spring 2025",
-    title: "Bolt.new 30-Day Hackathon",
-    body: "Joined mid-competition. Met in Discord across 3 continents. Built first prototype.",
+    title: "The hackathon",
+    body: "Shannon, Tobi, and Maruf met in a Discord during the Bolt.new hackathon and built their first prototype together.",
   },
   {
-    date: "Post-Hackathon 2025",
-    title: "The Discord Stayed Open",
-    body: "Turned a 14-hour time zone gap into a continuous build loop.",
+    date: "Summer 2025",
+    title: "The decision to keep going",
+    body: "The competition ended; the working rhythm didn't. The team kept building together.",
   },
   {
     date: "August 2025 – Present",
-    title: "Incorporation & Lab R&D",
-    body: "Official commitment. Over 1.5 years researching, building, and refining tools in the open.",
+    title: "OmniVeo",
+    body: "Officially incorporated. A year and a half of research, prototypes, and building with AI led to the studio's first products.",
   },
 ];
 
@@ -32,9 +32,9 @@ export default function Origin() {
             How we started
           </p>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-neutral-900 sm:text-5xl">
-            We lost our first hackathon. Then we spent the next{" "}
+            We lost our first hackathon.{" "}
             <em className="font-serif font-normal italic">
-              year and a half building.
+              Then we kept building.
             </em>
           </h2>
         </motion.div>
@@ -49,28 +49,22 @@ export default function Origin() {
             className="space-y-6 text-[15px] leading-relaxed text-neutral-600 sm:text-base"
           >
             <p className="text-lg leading-relaxed text-neutral-900 sm:text-xl">
-              In spring 2025, Shannon, Tobi, and Maruf entered the 30-day
-              Bolt.new hackathon — connecting inside Discord from California,
-              Lagos, and Dhaka to test an idea and see if we could build under
-              pressure.
+              OmniVeo started as three strangers in a hackathon Discord —
+              Shannon in California, Tobi in Lagos, Maruf in Dhaka — testing
+              whether they could build something real under pressure.
             </p>
             <p>
-              We didn't win. But in those two intense weeks, we discovered a
-              shared obsession with building and an effortless rhythm working
-              across a 14-hour time zone gap. Most hackathon groups move on
-              when the submission deadline hits; we kept the Discord room open.
+              They didn't win. But somewhere in those two weeks, the
+              experiment stopped being about the competition. What started as
+              a prototype for an AI creative tutor turned into a question:
+              what tools would make it dramatically easier for people to
+              create, launch, and earn on their own?
             </p>
             <p>
-              By August, we made our commitment official and incorporated the
-              company to pursue the vision long-term. For the last year and a
-              half, we have been researching, building, testing, and refining
-              in the open.
-            </p>
-            <p>
-              What began as an early prototype for an AI creative tutor grew
-              into a broader mission: giving creators, founders, and builders
-              the tools they need to bring their ideas to life and build
-              independent livelihoods.
+              By August they had their answer, and the company to go with it.
+              For the past year and a half, we've been building with AI —
+              researching, prototyping, and throwing out what didn't work —
+              and we're now opening up what we've made.
             </p>
           </motion.div>
 

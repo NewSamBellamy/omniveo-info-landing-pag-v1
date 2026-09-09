@@ -24,26 +24,22 @@ export default function CurrentStage() {
 
           <div className="relative">
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-neutral-400">
-              Current stage
+              Where we are
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl">
-              We are{" "}
-              <em className="font-serif font-normal italic">
-                in the lab.
-              </em>
+              First products{" "}
+              <em className="font-serif font-normal italic">coming soon.</em>
             </h2>
             <div className="mt-6 max-w-2xl space-y-5 text-base leading-relaxed text-neutral-300">
               <p>
-                We do not have commercial products on the shelf right now. We
-                are an early-stage lab running research, testing prototypes,
-                and building our foundations in public across three time
-                zones.
+                We don't have anything on the shelf yet. The past year and a
+                half went into research, prototypes, and learning what's
+                actually worth building. Now we're turning that work into our
+                first real products.
               </p>
               <p>
-                If you are a founder trying to launch, a builder hacking on an
-                idea, or a creator looking for better tooling, drop your email
-                into the waitlist above. We will reach out when early test
-                builds are ready for feedback.
+                Want to try them early? Join the waitlist — we'll reach out
+                when the first builds are ready.
               </p>
             </div>
             <a

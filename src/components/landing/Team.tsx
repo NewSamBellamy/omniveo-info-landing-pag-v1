@@ -6,22 +6,22 @@ const TEAM = [
     name: "Shannon Long",
     role: "Founder",
     focus: "Product Direction & Operations",
-    location: "Murrieta, California, USA • UTC-8 PST",
-    bio: "Focuses on product direction, operations, and community. Driven by the belief that anyone willing to put in the work can learn to build real things.",
+    location: "Murrieta, California",
+    bio: "Runs product direction, operations, and community. Believes anyone willing to put in the work can learn to build real things.",
   },
   {
     name: "Tobi",
     role: "Co-Founder",
     focus: "Head of Design",
-    location: "Lagos, Nigeria • UTC+1 WAT",
-    bio: "Product design, user experience, and visual craft. Focused on clean, humane interfaces that stay out of the builder's way.",
+    location: "Lagos, Nigeria",
+    bio: "Owns product design and user experience. Focused on clean, simple interfaces that stay out of your way.",
   },
   {
     name: "Maruf",
     role: "Co-Founder",
     focus: "Lead Engineer",
-    location: "Dhaka, Bangladesh • UTC+6 BST",
-    bio: "Backend architecture and full-stack engineering. Builds reliable, clean systems that turn product ideas into working software.",
+    location: "Dhaka, Bangladesh",
+    bio: "Owns backend architecture and full-stack engineering. Builds reliable systems that turn product ideas into working software.",
   },
 ];
 
@@ -40,12 +40,11 @@ export default function Team() {
             The team
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-neutral-900 sm:text-5xl">
-            Three builders,{" "}
-            <em className="font-serif font-normal italic">three continents</em>
+            Small team,{" "}
+            <em className="font-serif font-normal italic">wide reach</em>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-neutral-500">
-            Collaborating seamlessly across three time zones and over 1.5 years
-            of continuous building.
+            Three founders who've been building together since 2025.
           </p>
         </motion.div>
 

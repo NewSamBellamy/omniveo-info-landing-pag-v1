@@ -9,10 +9,9 @@ export default function Footer() {
           <div className="max-w-sm">
             <span className="font-display text-lg font-semibold tracking-tight text-neutral-900">
               OmniVeo
-            </span>
-            <p className="mt-3 text-sm leading-relaxed text-neutral-500">
-              An early-stage, open-source AI lab. Tools for the people who
-              make things.
+            </span>            <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+              An AI studio building practical tools for people who make
+              things.
             </p>
           </div>
 

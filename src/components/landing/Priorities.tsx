@@ -7,28 +7,28 @@ const PRIORITIES = [
     tag: "LEARN",
     icon: BookOpen,
     title: "Lowering the barrier to build",
-    body: "Complex systems shouldn't require years of trial and error to master. We build intuitive software that helps people learn by building real projects—skipping tutorial paralysis completely.",
+    body: "Complex systems shouldn't take years to master. We build software that helps people learn by making real things, instead of getting stuck in tutorials.",
   },
   {
     badge: "02",
     tag: "BUILD",
     icon: Hammer,
     title: "Practical workflows over novelty toys",
-    body: "We don't build disposable hype bots. We engineer tools that eliminate technical friction and repetitive operational overhead, allowing solo founders and creators to ship production-grade work.",
+    body: "No hype bots. We engineer tools that remove friction and repetitive work, so solo founders and creators can ship work they're proud of.",
   },
   {
     badge: "03",
     tag: "OPEN SOURCE",
     icon: Code2,
     title: "Community first, real value for free",
-    body: "Our priority is providing real value to the community for free. We believe open-source foundations make technology honest, transparent, and accessible to anyone with an internet connection.",
+    body: "The foundations of what we build stay free and open. Open source keeps technology honest, transparent, and available to anyone.",
   },
   {
     badge: "04",
     tag: "SUSTAINABILITY",
     icon: Coins,
     title: "Supporting creator independence",
-    body: "Software should help put money in your pocket, not just drain your bank account. Our long-term mission is to empower creators, founders, and builders to earn a real, independent living from their work.",
+    body: "Software should help you earn, not just spend. Our long-term goal is for creators, founders, and builders to make an independent living from their work.",
   },
 ];
 
@@ -48,13 +48,10 @@ export default function Priorities() {
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-neutral-900 sm:text-5xl">
             Built for people who{" "}
-            <em className="font-serif font-normal italic">
-              make things
-            </em>
+            <em className="font-serif font-normal italic">make things</em>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-neutral-500">
-            We are engineering open-source tools anchored around four
-            foundational pillars:
+            Four principles anchor everything we ship:
           </p>
         </motion.div>
 

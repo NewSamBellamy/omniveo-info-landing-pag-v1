@@ -13,12 +13,12 @@ const PILLARS = [
   {
     icon: Code2,
     title: "Open Source First",
-    body: "Every tool we ship is built in the open, on public foundations.",
+    body: "The foundations of what we build stay open and free.",
   },
   {
     icon: Users,
     title: "Community Owned",
-    body: "Shaped by the people who use it — feedback drives the roadmap.",
+    body: "Shaped by the people who use it, not the other way around.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="top" className="relative overflow-hidden pt-32 sm:pt-44">
+    <section id="top" className="relative overflow-hidden pt-36 sm:pt-48">
       {/* Warm ambient light blobs */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-[-220px] h-[420px] w-[760px] -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl" />
@@ -64,25 +64,12 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Eyebrow badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex justify-center"
-        >
-          <span className="flex items-center gap-2 rounded-full border border-black/[0.08] bg-white px-4 py-1.5 text-[11px] font-medium tracking-wide text-neutral-500 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
-            Early-Stage · Open Source Lab
-          </span>
-        </motion.div>
-
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
-          className="mx-auto mt-8 max-w-5xl text-center text-5xl font-semibold leading-[1.04] tracking-[-0.04em] text-neutral-900 sm:text-7xl md:text-[5.25rem]"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mx-auto max-w-5xl text-center text-5xl font-semibold leading-[1.04] tracking-[-0.04em] text-neutral-900 sm:text-7xl md:text-[5.25rem]"
         >
           AI tools for{" "}
           <em className="font-serif font-normal italic tracking-[-0.015em]">
@@ -94,18 +81,18 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.16 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
           className="mx-auto mt-7 max-w-xl text-center text-base text-neutral-500 sm:text-lg"
         >
-          We're a global team of founders dedicated to building tools around
-          the open source community.
+          We're a small team of designers and engineers building practical AI
+          software — from first sketch to working product.
         </motion.p>
 
         {/* Dual CTA row */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.24 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.16 }}
           className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
           <a
@@ -126,7 +113,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.32 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.24 }}
           id="waitlist"
           className="mt-12 scroll-mt-32"
         >
@@ -179,7 +166,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.32 }}
           className="mt-20 sm:mt-28"
         >
           <div className="relative mx-auto max-w-4xl">
@@ -195,7 +182,7 @@ export default function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
                 <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
                 <span className="ml-3 font-mono text-[11px] text-neutral-400">
-                  omniveo // open-source-engine
+                  omniveo // how we build
                 </span>
               </div>
 
@@ -219,10 +206,10 @@ export default function Hero() {
               {/* Bottom hairline footer */}
               <div className="flex items-center justify-between border-t border-black/[0.06] px-5 py-3.5">
                 <span className="font-mono text-[11px] text-neutral-400">
-                  built in public
+                  omniveo.info
                 </span>
                 <span className="font-mono text-[11px] text-neutral-400">
-                  MIT license
+                  est. 2025
                 </span>
               </div>
             </div>

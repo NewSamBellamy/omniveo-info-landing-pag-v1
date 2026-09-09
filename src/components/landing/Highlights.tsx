@@ -6,29 +6,28 @@ const MARQUEE_ITEMS = [
   "Practical over hype",
   "Open source first",
   "Community owned",
-  "Built in public",
   "Creator independence",
 ];
 
 const STATS = [
-  { value: "3", label: "Continents, one Discord" },
-  { value: "14h", label: "Time zone gap, daily overlap" },
-  { value: "18+", label: "Months building in the open" },
+  { value: "2025", label: "The year we got started" },
+  { value: "3", label: "Founders, three cities" },
+  { value: "1.5+", label: "Years building with AI" },
 ];
 
 const AUDIENCES = [
   {
     icon: Hammer,
     label: "For builders",
-    title: "Ship without the friction",
-    body: "Solo founders, creators, and makers: we are building the tools we always wanted — practical workflows that cut repetitive work so you can ship production-grade things, not tutorials. Join the waitlist and we will bring you in when early test builds are ready.",
+    title: "Real tools, not demos",
+    body: "We build the software we need ourselves — practical workflows that cut busywork and help you ship. Join the waitlist to try early builds before anyone else.",
     cta: { label: "Join the waitlist", href: "#waitlist", primary: true },
   },
   {
     icon: Briefcase,
     label: "For businesses",
-    title: "Work with an open lab",
-    body: "Partnerships, evaluations, licensing questions, or an open-source problem worth solving together — we make time for serious conversations. Write to us directly and a founder will personally reply.",
+    title: "Work with us",
+    body: "Partnerships, collaborations, or a problem you think we should tackle — write to us directly and a founder will reply.",
     cta: {
       label: "Email a founder",
       href: "mailto:shannon@omniveo.info",
