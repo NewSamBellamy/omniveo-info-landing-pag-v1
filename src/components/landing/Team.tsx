@@ -41,13 +41,11 @@ export default function Team() {
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-neutral-900 sm:text-5xl">
             Three builders,{" "}
-            <em className="font-serif font-normal italic">
-              three continents
-            </em>
+            <em className="font-serif font-normal italic">three continents</em>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-neutral-500">
-            Collaborating seamlessly across three time zones and over 1.5
-            years of continuous building.
+            Collaborating seamlessly across three time zones and over 1.5 years
+            of continuous building.
           </p>
         </motion.div>
 
@@ -70,6 +68,7 @@ export default function Team() {
                   {member.role}
                 </span>
               </div>
+
               <h3 className="mt-6 text-lg font-semibold tracking-tight text-neutral-900">
                 {member.name}
               </h3>
