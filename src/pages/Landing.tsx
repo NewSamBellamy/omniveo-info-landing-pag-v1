@@ -15,7 +15,7 @@ export default function Landing() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen bg-black text-white antialiased"
+      className="min-h-screen bg-[#fafaf9] text-neutral-900 antialiased"
     >
       <Navbar />
       <main>
@@ -23,9 +23,7 @@ export default function Landing() {
         <Highlights />
         <Priorities />
         <CurrentStage />
-        <div className="ov-hairline mx-auto max-w-6xl" aria-hidden="true" />
         <Origin />
-        <div className="ov-hairline mx-auto max-w-6xl" aria-hidden="true" />
         <Team />
         <Faq />
       </main>

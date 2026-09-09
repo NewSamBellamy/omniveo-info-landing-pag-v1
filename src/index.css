@@ -43,6 +43,7 @@
 
   /* OmniVeo display font */
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 }
 
@@ -139,23 +140,24 @@ html {
 }
 
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #fafaf9;
+  color: #171717;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.9);
-  color: #000000;
+  background: #171717;
+  color: #ffffff;
 }
 
-/* Depth recipe for every card: hairline border + top inset highlight + deep ambient shadow */
+/* Light-mode depth recipe: hairline border + top inset highlight + soft ambient shadow */
 .ov-card {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 24px 70px -30px rgba(0, 0, 0, 0.9);
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 16px 40px -20px rgba(0, 0, 0, 0.12);
 }
 
 .ov-card-hover {
@@ -166,11 +168,12 @@ body {
 }
 
 .ov-card-hover:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, 0.16);
+  transform: translateY(-3px);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    0 34px 90px -32px rgba(0, 0, 0, 0.95);
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 24px 56px -22px rgba(0, 0, 0, 0.18);
 }
 
 /* Hairline divider */
@@ -178,7 +181,7 @@ body {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(255, 255, 255, 0.14),
+    rgba(0, 0, 0, 0.12),
     transparent
   );
   height: 1px;
@@ -187,9 +190,29 @@ body {
 /* Fine monochrome grid texture (neutral strokes only) */
 .ov-grid-bg {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
+}
+
+/* Infinite marquee (trendy ticker strip) */
+@keyframes ov-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ov-marquee {
+  animation: ov-marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ov-marquee {
+    animation: none;
+  }
 }
 
 /* ============================================================
@@ -317,4 +340,50 @@ body {
 .osmo-credits__p-a:hover {
   color: #d4d4d4;
   border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================
+   Light-mode parallax demo overrides (route-scoped: /parallax-demo)
+   ============================================================ */
+
+.parallax {
+  background: #fafaf9;
+}
+
+.parallax__layer-img {
+  filter: grayscale(1) contrast(1.02) brightness(1.08);
+}
+
+.parallax__title {
+  color: #171717;
+}
+
+.parallax__fade {
+  background: linear-gradient(to bottom, rgba(250, 250, 249, 0), #fafaf9);
+}
+
+.parallax__content {
+  background: #fafaf9;
+}
+
+.osmo-icon-svg {
+  color: #171717;
+}
+
+.osmo-credits {
+  background: #fafaf9;
+}
+
+.osmo-credits__p {
+  color: #a3a3a3;
+}
+
+.osmo-credits__p-a {
+  color: #171717;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.osmo-credits__p-a:hover {
+  color: #404040;
+  border-bottom-color: rgba(0, 0, 0, 0.6);
 }

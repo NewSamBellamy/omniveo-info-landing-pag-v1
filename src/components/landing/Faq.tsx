@@ -35,34 +35,48 @@ const FAQS = [
 
 export default function Faq() {
   return (
-    <section className="relative py-24 sm:py-32">
+    <section id="faq" className="relative scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center"
         >
-          <p className="font-mono text-xs tracking-widest text-neutral-500">FAQ</p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Questions, answered
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-neutral-400">
+            FAQ
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-neutral-900 sm:text-5xl">
+            Questions,{" "}
+            <em className="font-serif font-normal italic">answered</em>
           </h2>
         </motion.div>
 
-        <div className="mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="ov-card mt-12 rounded-3xl bg-white px-6 py-2 sm:px-8"
+        >
           <Accordion type="single" collapsible className="w-full">
             {FAQS.map((item) => (
-              <AccordionItem key={item.q} value={item.q} className="border-white/10">
-                <AccordionTrigger className="text-left font-display text-base font-medium text-white hover:no-underline hover:text-neutral-300">
+              <AccordionItem
+                key={item.q}
+                value={item.q}
+                className="border-black/[0.08]"
+              >
+                <AccordionTrigger className="text-left text-[15px] font-medium text-neutral-900 hover:no-underline hover:text-neutral-600">
                   {item.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-neutral-400">
+                <AccordionContent className="text-sm leading-relaxed text-neutral-500">
                   {item.a}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -49,33 +49,18 @@ export default function Hero() {
   };
 
   return (
-    <section id="top" className="relative overflow-hidden pt-24 sm:pt-36">
-      {/* Ambient top spotlight */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[600px]"
-      >
-        <svg
-          className="absolute left-1/2 top-0 h-[600px] w-[1000px] -translate-x-1/2"
-          viewBox="0 0 1000 600"
-          fill="none"
-        >
-          <defs>
-            <radialGradient id="heroSpot" cx="50%" cy="0%" r="80%">
-              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.15" />
-              <stop offset="45%" stopColor="#a3a3a3" stopOpacity="0.05" />
-              <stop offset="100%" stopColor="#000000" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-          <rect width="1000" height="600" fill="url(#heroSpot)" />
-        </svg>
-        <div className="absolute left-1/2 top-[-140px] h-72 w-[640px] -translate-x-1/2 rounded-full bg-white/[0.08] blur-3xl" />
+    <section id="top" className="relative overflow-hidden pt-32 sm:pt-44">
+      {/* Warm ambient light blobs */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-[-220px] h-[420px] w-[760px] -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl" />
+        <div className="absolute left-[8%] top-[-80px] h-64 w-[420px] rounded-full bg-neutral-200/70 blur-3xl" />
+        <div className="absolute right-[6%] top-[-40px] h-56 w-[380px] rounded-full bg-amber-100/60 blur-3xl" />
       </div>
 
       {/* Fine grid texture */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 ov-grid-bg [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]"
+        className="pointer-events-none absolute inset-0 ov-grid-bg [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)]"
       />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
@@ -86,8 +71,9 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <span className="rounded-full border border-white/10 bg-neutral-900/80 px-3.5 py-1 font-mono text-xs text-neutral-400">
-            Early-Stage • Open Source Lab
+          <span className="flex items-center gap-2 rounded-full border border-black/[0.08] bg-white px-4 py-1.5 text-[11px] font-medium tracking-wide text-neutral-500 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
+            Early-Stage · Open Source Lab
           </span>
         </motion.div>
 
@@ -96,11 +82,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
-          className="mx-auto mt-8 max-w-5xl text-center font-display text-5xl font-bold leading-[1.04] tracking-[-0.035em] sm:text-7xl md:text-8xl"
+          className="mx-auto mt-8 max-w-5xl text-center text-5xl font-semibold leading-[1.04] tracking-[-0.04em] text-neutral-900 sm:text-7xl md:text-[5.25rem]"
         >
-          <span className="bg-gradient-to-b from-white via-white to-neutral-400 bg-clip-text text-transparent">
-            AI tools for creators, founders, and builders.
-          </span>
+          AI tools for{" "}
+          <em className="font-serif font-normal italic tracking-[-0.015em]">
+            creators, founders, and builders.
+          </em>
         </motion.h1>
 
         {/* Subheadline */}
@@ -108,10 +95,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.16 }}
-          className="mx-auto mt-7 max-w-2xl text-center text-base text-neutral-400 sm:text-lg"
+          className="mx-auto mt-7 max-w-xl text-center text-base text-neutral-500 sm:text-lg"
         >
-          We're a global team of founders dedicated to building tools around the
-          open source community.
+          We're a global team of founders dedicated to building tools around
+          the open source community.
         </motion.p>
 
         {/* Dual CTA row */}
@@ -119,33 +106,33 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.24 }}
-          className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
           <a
             href="#waitlist"
-            className="w-full sm:w-auto rounded-lg bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-neutral-200 transition-colors"
+            className="w-full rounded-full bg-neutral-900 px-7 py-3 text-center text-sm font-semibold text-white shadow-[0_10px_24px_-10px_rgba(0,0,0,0.5)] transition-colors hover:bg-neutral-700 sm:w-auto"
           >
             Join the Waitlist
           </a>
           <a
             href="#origin"
-            className="w-full sm:w-auto rounded-lg border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white hover:bg-white/[0.07] transition-colors"
+            className="w-full rounded-full border border-black/10 bg-white px-7 py-3 text-center text-sm font-medium text-neutral-800 transition-colors hover:border-black/20 hover:bg-neutral-50 sm:w-auto"
           >
             Our Story
           </a>
         </motion.div>
 
-        {/* Waitlist input bar */}
+        {/* Waitlist input pill */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.32 }}
           id="waitlist"
-          className="mt-12"
+          className="mt-12 scroll-mt-32"
         >
           <form
             onSubmit={handleSubmit}
-            className="mx-auto flex max-w-md items-center gap-2 rounded-xl border border-white/15 bg-neutral-900/90 p-1.5 shadow-2xl backdrop-blur-md"
+            className="mx-auto flex max-w-md items-center gap-2 rounded-full border border-black/10 bg-white p-1.5 pl-5 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_20px_48px_-20px_rgba(0,0,0,0.2)]"
           >
             <input
               type="email"
@@ -153,12 +140,12 @@ export default function Hero() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your work email..."
-              className="flex-grow bg-transparent px-3 text-sm text-white placeholder-neutral-500 focus:outline-none min-w-0"
+              className="min-w-0 flex-grow bg-transparent text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none"
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              className="shrink-0 rounded-lg bg-white px-4 py-2 text-xs font-semibold text-black hover:bg-neutral-200 transition-colors disabled:opacity-60"
+              className="shrink-0 rounded-full bg-neutral-900 px-5 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-neutral-700 disabled:opacity-60"
             >
               {status === "loading" ? "Joining..." : "Join Waitlist"}
             </button>
@@ -169,7 +156,7 @@ export default function Hero() {
             {status === "success" || status === "error" ? (
               <p
                 className={`text-xs ${
-                  status === "success" ? "text-white" : "text-neutral-400"
+                  status === "success" ? "text-neutral-900" : "text-red-600"
                 }`}
               >
                 {message}
@@ -179,7 +166,7 @@ export default function Hero() {
                 Pre-release. Questions or early ideas?{" "}
                 <a
                   href="mailto:shannon@omniveo.info"
-                  className="text-neutral-400 hover:text-white transition-colors"
+                  className="text-neutral-700 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-neutral-900"
                 >
                   Email shannon@omniveo.info
                 </a>
@@ -196,31 +183,30 @@ export default function Hero() {
           className="mt-20 sm:mt-28"
         >
           <div className="relative mx-auto max-w-4xl">
-            {/* Ambient glow behind canvas */}
+            {/* Warm glow behind canvas */}
             <div
               aria-hidden="true"
-              className="absolute -inset-x-8 -top-10 h-40 rounded-full bg-white/[0.05] blur-3xl"
+              className="absolute -inset-x-10 -top-12 h-48 rounded-full bg-orange-200/40 blur-3xl"
             />
-            <div className="ov-card relative overflow-hidden rounded-2xl bg-neutral-950/80 backdrop-blur-md">
+            <div className="ov-card relative overflow-hidden rounded-3xl bg-white">
               {/* Window chrome */}
-              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
-                <span className="h-2.5 w-2.5 rounded-full bg-neutral-700" />
-                <span className="h-2.5 w-2.5 rounded-full bg-neutral-700" />
-                <span className="h-2.5 w-2.5 rounded-full bg-neutral-700" />
-                <span className="ml-3 font-mono text-[11px] text-neutral-500">
+              <div className="flex items-center gap-2 border-b border-black/[0.06] px-5 py-3.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
+                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
+                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
+                <span className="ml-3 font-mono text-[11px] text-neutral-400">
                   omniveo // open-source-engine
                 </span>
               </div>
 
               {/* Pillars */}
-              <div className="grid gap-px bg-white/10 sm:grid-cols-3">
+              <div className="grid gap-px bg-black/[0.06] sm:grid-cols-3">
                 {PILLARS.map((pillar) => (
-                  <div
-                    key={pillar.title}
-                    className="bg-neutral-950/90 p-6 sm:p-8"
-                  >
-                    <pillar.icon className="h-5 w-5 text-neutral-300" />
-                    <h3 className="mt-4 text-sm font-medium text-white">
+                  <div key={pillar.title} className="bg-white p-7 sm:p-8">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-900 text-white">
+                      <pillar.icon className="h-4 w-4" />
+                    </span>
+                    <h3 className="mt-5 text-sm font-semibold tracking-tight text-neutral-900">
                       {pillar.title}
                     </h3>
                     <p className="mt-2 text-xs leading-relaxed text-neutral-500">
@@ -231,11 +217,11 @@ export default function Hero() {
               </div>
 
               {/* Bottom hairline footer */}
-              <div className="flex items-center justify-between border-t border-white/10 px-4 py-3">
-                <span className="font-mono text-[11px] text-neutral-600">
+              <div className="flex items-center justify-between border-t border-black/[0.06] px-5 py-3.5">
+                <span className="font-mono text-[11px] text-neutral-400">
                   built in public
                 </span>
-                <span className="font-mono text-[11px] text-neutral-600">
+                <span className="font-mono text-[11px] text-neutral-400">
                   MIT license
                 </span>
               </div>
