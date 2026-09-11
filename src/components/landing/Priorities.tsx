@@ -1,34 +1,29 @@
 import { motion } from "framer-motion";
-import { BookOpen, Hammer, Code2, Coins } from "lucide-react";
 
 const PRIORITIES = [
   {
     badge: "01",
     tag: "LEARN",
-    icon: BookOpen,
     title: "Lowering the barrier to build",
-    body: "Complex systems shouldn't take years to master. We build software that helps people learn by making real things, instead of getting stuck in tutorials.",
+    body: "Complex systems shouldn't take years to master. We build software that teaches by doing — real projects, not another tutorial you'll abandon halfway through.",
   },
   {
     badge: "02",
     tag: "BUILD",
-    icon: Hammer,
     title: "Practical workflows over novelty toys",
-    body: "No hype bots. We engineer tools that remove friction and repetitive work, so solo founders and creators can ship work they're proud of.",
+    body: "No hype bots. We engineer tools that cut friction and repetitive work, so solo founders and creators can ship things they're actually proud of.",
   },
   {
     badge: "03",
     tag: "OPEN SOURCE",
-    icon: Code2,
     title: "Community first, real value for free",
-    body: "The foundations of what we build stay free and open. Open source keeps technology honest, transparent, and available to anyone.",
+    body: "Everything we build stays free and open at its core. Open source keeps us honest, keeps our work transparent, and keeps it available to anyone — not just paying customers.",
   },
   {
     badge: "04",
     tag: "SUSTAINABILITY",
-    icon: Coins,
     title: "Supporting creator independence",
-    body: "Software should help you earn, not just spend. Our long-term goal is for creators, founders, and builders to make an independent living from their work.",
+    body: "Software should help you earn, not just spend. Our long-term goal is simple: help creators, founders, and builders make an independent living from their own work.",
   },
 ];
 
@@ -55,7 +50,7 @@ export default function Priorities() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="mt-16 flex flex-col gap-6 max-w-4xl mx-auto">
           {PRIORITIES.map((item, i) => (
             <motion.div
               key={item.badge}
@@ -65,24 +60,26 @@ export default function Priorities() {
               transition={{
                 duration: 0.6,
                 ease: "easeOut",
-                delay: (i % 2) * 0.1,
+                delay: i * 0.1,
               }}
-              className="ov-card ov-card-hover group rounded-3xl bg-white p-8 sm:p-9"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-10 border-t border-black/[0.08] pt-8 pb-4"
             >
-              <div className="flex items-center justify-between">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-black/[0.08] bg-neutral-50 text-neutral-700 transition-colors group-hover:bg-neutral-900 group-hover:text-white">
-                  <item.icon className="h-4 w-4" />
-                </span>
-                <span className="font-mono text-[11px] tracking-[0.18em] text-neutral-300">
-                  {item.badge} / {item.tag}
+              <div className="flex-shrink-0 w-24">
+                <span className="font-mono text-3xl font-light text-orange-400">
+                  {item.badge}
                 </span>
               </div>
-              <h3 className="mt-7 text-lg font-semibold tracking-tight text-neutral-900">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-500">
-                {item.body}
-              </p>
+              <div>
+                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-neutral-400">
+                  {item.tag}
+                </span>
+                <h3 className="mt-3 text-xl font-semibold tracking-tight text-neutral-900">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-neutral-600">
+                  {item.body}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

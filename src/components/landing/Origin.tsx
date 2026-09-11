@@ -16,6 +16,12 @@ const MILESTONES = [
     title: "OmniVeo",
     body: "Officially incorporated. A year and a half of research, prototypes, and building with AI led to the studio's first products.",
   },
+  {
+    date: "What's next",
+    title: "First open-source release",
+    body: "Timeline to be announced",
+    upcoming: true
+  }
 ];
 
 export default function Origin() {
@@ -63,8 +69,8 @@ export default function Origin() {
             <p>
               By August they had their answer, and the company to go with it.
               For the past year and a half, we've been building with AI —
-              researching, prototyping, and throwing out what didn't work —
-              and we're now opening up what we've made.
+              researching, prototyping, and throwing out what didn't work.
+              Now we're opening up what we've made, for good.
             </p>
           </motion.div>
 
@@ -87,7 +93,9 @@ export default function Origin() {
                   <span
                     aria-hidden="true"
                     className={`absolute left-0 top-1.5 h-[13px] w-[13px] rounded-full border ${
-                      i === MILESTONES.length - 1
+                      m.upcoming
+                        ? "border-orange-400 bg-transparent border-dashed"
+                        : i === MILESTONES.length - 2
                         ? "border-neutral-900 bg-neutral-900 shadow-[0_0_0_4px_rgba(0,0,0,0.08)]"
                         : "border-neutral-300 bg-white"
                     }`}

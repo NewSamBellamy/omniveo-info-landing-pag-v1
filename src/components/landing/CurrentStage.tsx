@@ -32,19 +32,49 @@ export default function CurrentStage() {
             </h2>
             <div className="mt-6 max-w-2xl space-y-5 text-base leading-relaxed text-neutral-300">
               <p>
-                We don't have anything on the shelf yet. The past year and a
-                half went into research, prototypes, and learning what's
-                actually worth building. Now we're turning that work into our
-                first real products.
+                We don't have anything on the shelf yet — and we're not going to
+                pretend otherwise. The last year and a half went into research,
+                prototypes, and figuring out what's actually worth building.
               </p>
               <p>
-                Want to try them early? Join the waitlist — we'll reach out
-                when the first builds are ready.
+                Going forward, everything we ship will be free and open-source
+                from day one. Our goal is a steady rhythm, not a big launch: a
+                new tool roughly every 4 to 8 weeks, built for people who make
+                things and shaped by the community using them.
+              </p>
+              <p>
+                Want to try the first ones early? Join the waitlist — we'll
+                email you the moment a build is ready.
               </p>
             </div>
+            
+            {/* Release Rhythm Visual Strip */}
+            <div className="mt-10 border-t border-white/10 pt-8">
+              <div className="flex items-center gap-4 sm:gap-6 text-sm font-mono text-neutral-400">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-orange-400/80 shadow-[0_0_8px_rgba(251,146,60,0.8)]" />
+                  <span className="text-neutral-200">Tool 01</span>
+                </div>
+                <div className="h-px w-8 sm:w-12 bg-white/10" />
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/20" />
+                  <span>Tool 02</span>
+                </div>
+                <div className="h-px w-8 sm:w-12 bg-white/10" />
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/20" />
+                  <span>Tool 03</span>
+                </div>
+                <div className="hidden sm:block h-px w-12 bg-white/10" />
+                <span className="hidden sm:inline-block italic text-neutral-500">
+                  Every 4–8 weeks
+                </span>
+              </div>
+            </div>
+
             <a
               href="#waitlist"
-              className="group mt-9 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-200"
+              className="group mt-10 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-200"
             >
               Join Waitlist
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

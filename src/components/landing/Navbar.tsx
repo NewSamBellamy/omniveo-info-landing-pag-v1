@@ -3,7 +3,7 @@ import { Github } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "What We Build", href: "#build" },
-  { label: "Current Stage", href: "#stage" },
+  { label: "Roadmap", href: "#stage" },
   { label: "Origin", href: "#origin" },
   { label: "Team", href: "#team" },
   { label: "FAQ", href: "#faq" },

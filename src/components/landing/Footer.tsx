@@ -10,7 +10,7 @@ export default function Footer() {
             <span className="font-display text-lg font-semibold tracking-tight text-neutral-900">
               OmniVeo
             </span>            <p className="mt-3 text-sm leading-relaxed text-neutral-500">
-              An AI studio building practical tools for people who make
+              An open-source AI studio building practical tools for people who make
               things.
             </p>
           </div>
@@ -30,7 +30,7 @@ export default function Footer() {
                 href="#stage"
                 className="text-sm text-neutral-500 transition-colors hover:text-neutral-900"
               >
-                Current Stage
+                Roadmap
               </a>
               <a
                 href="#origin"
@@ -68,7 +68,13 @@ export default function Footer() {
                 href="#waitlist"
                 className="text-sm text-neutral-500 transition-colors hover:text-neutral-900"
               >
-                Join the waitlist
+                Join Waitlist
+              </a>
+              <a
+                href="/privacy"
+                className="text-neutral-700 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-neutral-900"
+              >
+                Privacy Policy
               </a>
             </div>
           </div>
@@ -87,7 +93,7 @@ export default function Footer() {
         {/* Legal row */}
         <div className="mt-6 flex flex-col items-center gap-2 border-t border-black/[0.06] pt-6 sm:flex-row sm:justify-between">
           <span className="text-xs text-neutral-400">
-            © 2026 OmniVeo. Open source foundations.
+            © 2026 OmniVeo. Open source, from the ground up.
           </span>
           <span className="font-mono text-[11px] text-neutral-400">
             omniveo.info

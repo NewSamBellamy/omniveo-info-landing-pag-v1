@@ -9,27 +9,27 @@ import {
 const FAQS = [
   {
     q: "What is OmniVeo?",
-    a: "An AI studio — a small team of designers and engineers building practical AI software for creators, founders, and builders.",
+    a: "OmniVeo is a small, independent AI studio building practical, open-source software for creators, founders, and builders. We're not a big company with a big roadmap — we're three people who like solving real problems and giving the solutions away.",
   },
   {
     q: "What are you working on right now?",
-    a: "Our first products are in development now. The past year and a half went into research and prototypes; that work is becoming real tools, and waitlist members will try them first.",
+    a: "Our first products are in active development after a year and a half of R&D. We're not sharing specifics until they're ready to use — but once they ship, they'll be free and open-source, and the waitlist is the first place you'll hear about it.",
   },
   {
     q: "Will it be free?",
-    a: "The foundations of what we build stay free and open source. That's one of our core principles, not a marketing line.",
+    a: "Yes. Everything we build stays free and open-source at its core, forever. [NEEDS FOUNDER INPUT]",
   },
   {
     q: "When will I hear back after joining the waitlist?",
-    a: "When the first build is ready for feedback. There's nothing to onboard you into today — the waitlist is how you get early access.",
+    a: "We'll email you directly — from a founder, not a no-reply address — as soon as our first tools are ready to try. No spam, no filler updates in between.",
   },
   {
     q: "I run a business. Can we work together?",
-    a: "Yes. Partnerships, collaborations, or a problem you think we should tackle — email shannon@omniveo.info and a founder will reply.",
+    a: "Possibly. We're open to partnerships, integrations, and interesting problems worth solving. Email a founder directly and tell us what you have in mind.",
   },
   {
     q: "Who's behind OmniVeo?",
-    a: "Shannon, Tobi, and Maruf — three founders who met in a hackathon Discord in 2025 and never stopped building together.",
+    a: "Three founders who met as strangers in a hackathon Discord: Shannon (Murrieta, California), Tobi (Lagos, Nigeria), and Maruf (Dhaka, Bangladesh). More on each of us is in the Team section above.",
   },
 ];
 

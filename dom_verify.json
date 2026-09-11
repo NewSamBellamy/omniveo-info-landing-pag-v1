@@ -1,0 +1,14 @@
+{
+  "placeholderScan": {
+    "passed": true,
+    "issues": []
+  },
+  "specReconciliation": {
+    "passed": true,
+    "issues": []
+  },
+  "domAssertions": {
+    "passed": true,
+    "issues": []
+  }
+}

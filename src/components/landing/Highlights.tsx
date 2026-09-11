@@ -2,17 +2,18 @@ import { motion } from "framer-motion";
 import { Hammer, Briefcase } from "lucide-react";
 
 const MARQUEE_ITEMS = [
-  "Learn by building",
   "Practical over hype",
   "Open source first",
   "Community owned",
+  "Shipping every 4–8 weeks",
   "Creator independence",
+  "Learn by building",
 ];
 
 const STATS = [
   { value: "2025", label: "The year we got started" },
   { value: "3", label: "Founders, three cities" },
-  { value: "1.5+", label: "Years building with AI" },
+  { value: "1.5+", label: "Years in R&D before going public" },
 ];
 
 const AUDIENCES = [
@@ -20,16 +21,16 @@ const AUDIENCES = [
     icon: Hammer,
     label: "For builders",
     title: "Real tools, not demos",
-    body: "We build the software we need ourselves — practical workflows that cut busywork and help you ship. Join the waitlist to try early builds before anyone else.",
-    cta: { label: "Join the waitlist", href: "#waitlist", primary: true },
+    body: "We build the software we wish existed — practical tools that remove real friction, not another AI demo that never ships. Join the waitlist to try new releases before anyone else.",
+    cta: { label: "Join Waitlist", href: "#waitlist", primary: true },
   },
   {
     icon: Briefcase,
     label: "For businesses",
     title: "Work with us",
-    body: "Partnerships, collaborations, or a problem you think we should tackle — write to us directly and a founder will reply.",
+    body: "Partnerships, integrations, or a hard problem you think we should tackle — email us directly and a founder will reply.",
     cta: {
-      label: "Email a founder",
+      label: "Email a Founder",
       href: "mailto:shannon@omniveo.info",
       primary: false,
     },

@@ -1,26 +1,7 @@
 import { useMutation } from "convex/react";
 import { motion } from "framer-motion";
-import { Layers, Users, Code2 } from "lucide-react";
 import { useState } from "react";
 import { api } from "@/convex/_generated/api";
-
-const PILLARS = [
-  {
-    icon: Layers,
-    title: "Modular & Lean",
-    body: "Small surface area, composable parts, no heavy dependencies.",
-  },
-  {
-    icon: Code2,
-    title: "Open Source First",
-    body: "The foundations of what we build stay open and free.",
-  },
-  {
-    icon: Users,
-    title: "Community Owned",
-    body: "Shaped by the people who use it, not the other way around.",
-  },
-];
 
 export default function Hero() {
   const [email, setEmail] = useState("");
@@ -49,9 +30,9 @@ export default function Hero() {
   };
 
   return (
-    <section id="top" className="relative overflow-hidden pt-36 sm:pt-48">
+    <section id="top" className="relative pt-36 sm:pt-48">
       {/* Warm ambient light blobs */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-[-220px] h-[420px] w-[760px] -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl" />
         <div className="absolute left-[8%] top-[-80px] h-64 w-[420px] rounded-full bg-neutral-200/70 blur-3xl" />
         <div className="absolute right-[6%] top-[-40px] h-56 w-[380px] rounded-full bg-amber-100/60 blur-3xl" />
@@ -64,6 +45,16 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+        {/* Eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mx-auto mb-4 text-center font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-500"
+        >
+          OPEN-SOURCE AI STUDIO
+        </motion.p>
+        
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
@@ -84,8 +75,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
           className="mx-auto mt-7 max-w-xl text-center text-base text-neutral-500 sm:text-lg"
         >
-          We're a small team of designers and engineers building practical AI
-          software — from first sketch to working product.
+          We spent the last year and a half in quiet R&D. Now we're building in the open — free, open-source tools, with a new one shipping roughly every 4 to 8 weeks.
         </motion.p>
 
         {/* Dual CTA row */}
@@ -99,7 +89,7 @@ export default function Hero() {
             href="#waitlist"
             className="w-full rounded-full bg-neutral-900 px-7 py-3 text-center text-sm font-semibold text-white shadow-[0_10px_24px_-10px_rgba(0,0,0,0.5)] transition-colors hover:bg-neutral-700 sm:w-auto"
           >
-            Join the Waitlist
+            Join Waitlist
           </a>
           <a
             href="#origin"
@@ -150,16 +140,26 @@ export default function Hero() {
               </p>
             ) : (
               <p className="text-xs text-neutral-500">
-                Pre-release. Questions or early ideas?{" "}
-                <a
-                  href="mailto:shannon@omniveo.info"
-                  className="text-neutral-700 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-neutral-900"
-                >
-                  Email shannon@omniveo.info
-                </a>
+                We'll only email you about OmniVeo. Unsubscribe anytime.{" "}
+                <a href="/privacy" className="underline decoration-neutral-300 underline-offset-2 hover:text-neutral-900 transition-colors">Privacy Policy</a>
               </p>
             )}
           </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.32 }}
+            className="mt-6 text-center text-sm text-neutral-500"
+          >
+            Pre-release &middot; Building in the open &middot; Questions or early ideas?{" "}
+            <a
+              href="mailto:shannon@omniveo.info"
+              className="text-neutral-700 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-neutral-900"
+            >
+              Email shannon@omniveo.info
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* Studio Interface Canvas */}
@@ -175,42 +175,32 @@ export default function Hero() {
               aria-hidden="true"
               className="absolute -inset-x-10 -top-12 h-48 rounded-full bg-orange-200/40 blur-3xl"
             />
-            <div className="ov-card relative overflow-hidden rounded-3xl bg-white">
-              {/* Window chrome */}
-              <div className="flex items-center gap-2 border-b border-black/[0.06] px-5 py-3.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
-                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
-                <span className="h-2.5 w-2.5 rounded-full bg-neutral-200" />
-                <span className="ml-3 font-mono text-[11px] text-neutral-400">
-                  omniveo // how we build
-                </span>
+            <div className="relative overflow-hidden rounded-2xl bg-[#0d0d0d] shadow-2xl p-8 sm:p-12 border border-white/10 ring-1 ring-white/5">
+              <pre className="font-mono text-sm sm:text-base leading-[2] text-neutral-300">
+                <span className="text-neutral-500">// omniveo.config</span>
+                <br />
+                <br />
+                <span className="text-blue-400">license</span>: <span className="text-orange-300">"open-source"</span>
+                <br />
+                <span className="text-blue-400">surface_area</span>: <span className="text-orange-300">"small"</span>
+                <br />
+                <span className="text-blue-400">roadmap</span>: <span className="text-orange-300">"shaped by the community"</span>
+              </pre>
+            </div>
+            
+            {/* Value Props Captions */}
+            <div className="mt-8 grid gap-6 sm:grid-cols-3">
+              <div>
+                <h4 className="font-semibold text-neutral-900 text-sm">Modular & Lean</h4>
+                <p className="mt-1 text-xs text-neutral-500 leading-relaxed">Small, focused tools that do one thing well — no bloated platform to learn.</p>
               </div>
-
-              {/* Pillars */}
-              <div className="grid gap-px bg-black/[0.06] sm:grid-cols-3">
-                {PILLARS.map((pillar) => (
-                  <div key={pillar.title} className="bg-white p-7 sm:p-8">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-900 text-white">
-                      <pillar.icon className="h-4 w-4" />
-                    </span>
-                    <h3 className="mt-5 text-sm font-semibold tracking-tight text-neutral-900">
-                      {pillar.title}
-                    </h3>
-                    <p className="mt-2 text-xs leading-relaxed text-neutral-500">
-                      {pillar.body}
-                    </p>
-                  </div>
-                ))}
+              <div>
+                <h4 className="font-semibold text-neutral-900 text-sm">Open Source First</h4>
+                <p className="mt-1 text-xs text-neutral-500 leading-relaxed">Every tool ships with its source code. Free to use, fork, and build on — always.</p>
               </div>
-
-              {/* Bottom hairline footer */}
-              <div className="flex items-center justify-between border-t border-black/[0.06] px-5 py-3.5">
-                <span className="font-mono text-[11px] text-neutral-400">
-                  omniveo.info
-                </span>
-                <span className="font-mono text-[11px] text-neutral-400">
-                  est. 2025
-                </span>
+              <div>
+                <h4 className="font-semibold text-neutral-900 text-sm">Community Owned</h4>
+                <p className="mt-1 text-xs text-neutral-500 leading-relaxed">Shaped by the people using it, not a roadmap decided behind closed doors.</p>
               </div>
             </div>
           </div>
